@@ -1,41 +1,50 @@
 <!DOCTYPE HTML>
-
 <html>
-    <head>
-        <title>Matthew Newland - Portfolio</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    </head>
-    <body>
-        <!-- Wrapper -->
-        <div id="wrapper">
-            <!-- Header -->
-            <header id="header">
-                <div class="inner">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Odibee+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/73e475da2b.js" crossorigin="anonymous"></script>
+</head>
+
+    <title>Matthew Newland - Portfolio</title>
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <div class="menu">
+            <input type="checkbox" class="openMenu" id="openMenu">
+            <ul class="menuInner">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+                <li><a href="Achievements/Achievements.html">Achievements</a></li>
+                <li><a href="GameDevelopment/GameDevelopment.html">Game Development</a></li>
+                <li><a href="DataAnalysis.html">Data Analysis</a></li>
+                <li><a href="CollegeProjects/CollegeProjects.html">College Projects</a></li>
+            </ul>
+            <label for="openMenu" class="menuIconToggle">
+                <div class="arrow-background">
+                    <div class="arrow"></div>
                 </div>
-            </header>
+            </label>
+        </div>    
 
-            <!-- Menu -->
-            <nav id="menu">
-                <h2>Menu</h2>
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="AboutMe.html">About Me</a></li>
-                    <li><a href="Achievements/Achievements.html">Achievements</a></li>
-                    <li><a href="GameDevelopment/GameDevelopment.html">Game Development</a></li>
-                    <li><a href="DataAnalysis.html">Data Analysis</a></li>
-                    <li><a href="CollegeProjects/CollegeProjects.html">College Projects</a></li>
-                </ul>
-            </nav>
-
-            <!-- Main -->
-            <div id="main">
-                <div class="inner">
-                    <header>
-                        <h1>My name is Matthew Newland. Welcome to my page.</h1>
-                        <p>As a very analytical and logically-minded person, I've always had a fascination with solving puzzles. To me, programming is the best puzzle out there, because you can solve the puzzle while you create it. Plus, you get to make amazing things that can entertain, teach, and wow others.</p>
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <div id="headshot">
+                    <img src="/images/Headshot.jpg"  alt="Matthew Newland headshot">
+                </div>
+                <header>
+                    <h1>My name is Matthew Newland.</h1>
+                    <h1>Welcome to my portfolio.</h1>
+                </header>
+                <body>
+                    <p>My driving passion is for puzzles and games, and programming is one of the greatest puzzles out there. It allows me to create and solve problems at the same time.</p>
+                    <div id="skills">
                         <h2>List of skills</h2>
                         <ul>
                             <li>
@@ -48,15 +57,23 @@
                                 10+ years of troubleshooting and repairing computers
                             </li>
                         </ul>
-                        <p><a href=".\Resume.docx" download>View my resume</a>.</p>
-                    </header>
-
+                    </div>
+                    <p><a href=".\Resume.docx" download>View my resume</a>.</p>
+                </body>
+                <div class="category" >
+                    <button class="cat1">
+                        <h2>About me</h2>
+                    </button>
+                    <button class="cat1">
+                        
+                    </button> 
+                </div>
 
                 <!-- Footer -->
                 <footer id="footer">
                     <div class="inner">
                         <section>
-                            <h2>Get in touch</h2>
+                            <h2>Let's get in touch</h2>
                             <form method="post" action="https://formspree.io/f/xrgjakvb">
                                 <div class="fields">
                                     <div class="field half">
@@ -69,29 +86,33 @@
                                         <textarea name="message" id="message" placeholder="Message"></textarea>
                                     </div>
                                 </div>
-                                <ul class="actions">
-                                    <li><input type="submit" value="Send" class="primary" /></li>
-                                </ul>
+                                <input type="submit" value="Send" class="primary" />
                             </form>
                         </section>
                         <section>
-                            <h2>Follow</h2>
-                            <ul class="icons">
-                                <li><a href="https://www.facebook.com/matthew.h.newland" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                <li><a href="https://www.linkedin.com/in/matthew-h-newland/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                            </ul>
-                            <ul class="icons">
-                                <li><a href="https://github.com/MHNewland" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-                                <li><a href="https://play.unity.com/u/Amorindis" class="icon brands style2 fa-unity"><span class="label">Unity</span></a></li>
-                            </ul>
-                            <ul class="icons">
-                                <li><a href="tel:502-689-4396" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-                                <li><a href="mailto:matt.nwl@hotmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-                            </ul>
+                            <table id="contact-icons">
+                                <tr>
+                                    <th>Social Media:</th>
+                                    <td><a href="https://www.facebook.com/matthew.h.newland" class="fa-brands fa-facebook-square fa-2x"><span class="label">Facebook</span></a></td>
+                                    <td><a href="https://www.linkedin.com/in/matthew-h-newland/" class="fa-brands fa-linkedin fa-2x"><span class="label">LinkedIn</span></a></td>
+                                </tr>
+                                <tr>
+                                    <th>Code examples:</th>
+                                    <td><a href="https://github.com/MHNewland" class="fa-brands fa-github fa-2x"><span class="label">GitHub</span></a></td>
+                                    <td><a href="https://play.unity.com/u/Amorindis" class="fa-brands fa-unity fa-2x"><span class="label">Unity</span></a></td>
+
+                                </tr>
+                                <tr>
+                                    <th>Contact me:</th>
+                                    <td><a href="tel:502-689-4396" class="fa-solid fa-phone fa-2x"><span class="label">Phone</span></a></td>
+                                    <td><a href="mailto:matt.nwl@hotmail.com" class="fa-solid fa-envelope fa-2x"><span class="label">Email</span></a></td>
+                                </tr>
+                            </table>
+                            
                         </section>
                     </div>
                 </footer>
             </div>
         </div>
-    </body>
+    </div>
 </html>

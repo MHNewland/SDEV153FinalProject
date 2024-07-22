@@ -1,0 +1,161 @@
+*{
+    font-family: "Kode Mono", monospace;;
+}
+
+form{
+    display:block;
+    width:300px;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    width: 100%;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .menuIconToggle .arrow-background .arrow {
+    transition:all .25s;
+    border-top:0px;
+    border-bottom:20px solid gainsboro;
+}
+
+input[type="checkbox"]:checked ~ .menuInner {
+    transition: all .25s;
+    height:100px;
+    z-index: 10;
+}
+
+section{
+    margin: 0 auto;
+}
+
+table{
+    height:100%;
+    width:100%;
+}
+
+td a{
+    text-decoration: none;
+    color:black;
+}
+
+th{
+    text-align: right;
+    margin:0;
+}
+
+.arrow{
+    display:block;
+    height: 0px;
+    width: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top:20px solid gainsboro;
+    cursor: pointer;
+    z-index: 1;
+    transition:all .25s;
+    margin:0 auto;
+}
+
+.arrow-background{
+    display:block;
+    background-color: red;
+    padding:5px 10px;
+    width: 25px;
+    margin: 0 auto;
+}
+
+.category{
+    display:flex;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.category h2{
+    font-style: italic;
+}
+
+.cat1{
+    display:block;
+    width:100px;
+    height:100px;
+    background-image: radial-gradient(aqua, #016391);
+    border-radius:10px;
+    margin: auto;
+}
+
+.label{
+    display:none;
+}
+
+.menu{
+    position: sticky;
+    width:90%;
+    top: 0px;
+    margin: auto;
+}
+
+.menuIconToggle{
+    display:block;
+}
+
+.menuInner{
+    display:flex;
+    flex-direction: column;
+    background-color: red;
+    height:0px;
+    z-index: -10;
+    overflow: hidden;
+    margin:0;
+    transition:all .25s;
+    list-style-type: none;
+}
+
+.menuInner li{
+    padding: 5px;
+}
+
+.menuInner li a{
+    text-decoration: none;
+}
+
+#footer .inner{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 550px;
+}
+
+#headshot{
+    width:50%;
+    margin:0 auto;
+    max-height:500px;
+    padding-top:25px;
+}
+
+#headshot img{
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #211550;
+}
+
+#main{
+    padding: 20px;
+}
+
+#wrapper{
+    display:block;
+    background-image: linear-gradient(#D83F87, #44318D);
+    background-repeat: no-repeat;
+    width:auto;
+}
