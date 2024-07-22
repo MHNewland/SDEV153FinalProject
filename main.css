@@ -31,10 +31,6 @@ input[type="checkbox"]:checked ~ .menuInner {
     z-index: 10;
 }
 
-section{
-    margin: 0 auto;
-}
-
 table{
     height:100%;
     width:100%;
@@ -123,6 +119,10 @@ th{
 
 .menuInner li a{
     text-decoration: none;
+}
+
+.section{
+    margin: 0 auto;
 }
 
 #footer .inner{
