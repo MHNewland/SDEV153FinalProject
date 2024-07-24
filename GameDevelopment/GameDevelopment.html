@@ -3,9 +3,78 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="refresh" content="0; URL=../WIP.html" />
-    <title></title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Odibee+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/73e475da2b.js" crossorigin="anonymous"></script>
+    <title>Matthew Newland - Portfolio</title>
 </head>
 <body>
 
+    <!-- Menu -->
+    <div class="menu">
+        <input type="checkbox" class="openMenu" id="openMenu">
+        <ul class="menuInner">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="Achievements.html">Achievements</a></li>
+            <li><a href="GameDevelopment/GameDevelopment.html">Game Development</a></li>
+            <li><a href="DataAnalysis.html">Data Analysis</a></li>
+            <li><a href="CollegeProjects/CollegeProjects.html">College Projects</a></li>
+        </ul>
+        <label for="openMenu" class="menuIconToggle">
+            <i class="arrow-background">
+                <i class="arrow"></i>
+            </i>
+        </label>
+    </div>    
+    <div id="wrapper">
+
 </body>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <div class="section">
+            <form method="post" action="https://formspree.io/f/xrgjakvb">
+                <h2>Let's get in touch</h2>
+                <div class="fields">
+                    <div class="field">
+                        <input type="text" name="name" id="name" placeholder="Name" >
+                    </div>
+                    <div class="field">
+                        <input type="email" name="email" id="email" placeholder="Email" >
+                    </div>
+                    <div class="field">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <input type="submit" value="Send" class="form-button" >
+            </form>
+        </div>
+        <div class="section">
+            <table id="contact-icons">
+                <tr>
+                    <th>Social Media:</th>
+                    <td><a target="_blank" href="https://www.facebook.com/matthew.h.newland" class="fa-brands fa-facebook-square fa-2x"><span class="label">Facebook</span></a></td>
+                    <td><a target="_blank" href="https://www.linkedin.com/in/matthew-h-newland/" class="fa-brands fa-linkedin fa-2x"><span class="label">LinkedIn</span></a></td>
+                </tr>
+                <tr>
+                    <th>Code examples:</th>
+                    <td><a target="_blank" href="https://github.com/MHNewland" class="fa-brands fa-github fa-2x"><span class="label">GitHub</span></a></td>
+                    <td><a target="_blank" href="https://play.unity.com/u/Amorindis" class="fa-brands fa-unity fa-2x"><span class="label">Unity</span></a></td>
+
+                </tr>
+                <tr>
+                    <th>Contact me:</th>
+                    <td><a target="_blank" href="tel:502-689-4396" class="fa-solid fa-phone fa-2x"><span class="label">Phone</span></a></td>
+                    <td><a target="_blank" href="mailto:matt.nwl@hotmail.com" class="fa-solid fa-envelope fa-2x"><span class="label">Email</span></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</footer>
 </html>

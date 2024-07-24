@@ -1,0 +1,16 @@
+- Change menu based on screen size
+- change "view my resume" button
+- Confirm "AboutMe" is finished"
+- Create "Achievements" page
+    - headers for each type of achievement with link
+- Create "DataAnalysis" page
+    - show data analysis related achievements with link to view others
+- Create "GameDevelopment" page
+    - show game dev related achievements with link to view other achievements
+- Create "Unity" page
+    - Embed created games
+- Create "College Projects" page
+    - Create sections based on skills learned
+    - Game-dev stuff with link to proper Game dev page section
+    - Cloud video
+    - Python cert with link to other Achievements
