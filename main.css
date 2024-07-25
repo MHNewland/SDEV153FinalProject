@@ -51,8 +51,15 @@ h1{
     text-align: center;
 }
 
+h4{
+    text-decoration: underline;
+    margin-top: 50px;
+}
+
 img{
     width: 100%;
+    max-width: 500px;
+    
 }
 
 input[type="checkbox"]{
@@ -79,6 +86,7 @@ td a{
     padding: 5px 10px;
 }
 
+
 td a:hover{
     color:aqua;
 }
@@ -86,6 +94,51 @@ td a:hover{
 th{
     text-align: right;
     margin:0;
+}
+
+.achImg{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.achImg img{
+    display:block;
+    margin:auto;
+}
+
+.achTitle{
+    width:100%;
+    margin:10px auto;
+}
+
+.achievements ul{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.achievements ul li{
+    list-style: none;
+    padding: 10px;
+    margin-right:auto;
+    max-width: 600px;
+}
+
+.achievements a{
+    text-decoration: none;
+    margin:auto;
+}
+
+.achievements p{
+    margin: auto;
+}
+
+.achievements a:hover{
+    text-decoration: underline;
+    color:aqua;
+}
+
+.achievements a:hover h2{
+    color:aqua;
 }
 
 .arrow{
@@ -113,8 +166,8 @@ th{
 .button-background{
     border-radius:10px;
     margin: 5px auto;
-    width:100px;
-    height:100px;
+    width:150px;
+    height:150px;
 
 }
 
@@ -133,12 +186,12 @@ th{
 .cat1{
     transition: all .1s ease-in-out;
     display:block;
-    width:100px;
-    height:100px;
+    width:150px;
+    height:150px;
     background:aqua;
     border-radius:10px;
     margin: 5px;
-
+    font-size: .75em;
 }
 
 a:visited .cat1{
@@ -146,6 +199,23 @@ a:visited .cat1{
 }
 a:visited .cat1 h2{
     color: #3aea3a;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .cat1:hover{
@@ -171,6 +241,8 @@ a:visited .cat1 h2{
     padding:5px;
     margin-left:10px;
     color:#24242a;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .form-button:hover{
@@ -179,6 +251,34 @@ a:visited .cat1 h2{
 
 .label{
     display:none;
+}  
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);
+}
+  
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
 }
 
 .menu{
@@ -194,8 +294,6 @@ a:visited .cat1 h2{
 }
 
 .menuInner{
-    display:flex;
-    flex-direction: column;
     background-color: #242A24;
     height:0px;
     z-index: -10;
@@ -217,11 +315,32 @@ a:visited .cat1 h2{
     margin:auto;
 }
 
+.thumb {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width:200px;
+}
+  
+.thumb:hover {
+    opacity: 0.7;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
 #footer .inner{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: 700px;
 }
 
 #headshot{
@@ -252,4 +371,49 @@ a:visited .cat1 h2{
     background-color: #343434;
     background-repeat: no-repeat;
     width:auto;
+}
+
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+@media (min-width:600px){
+    input[type="checkbox"]:checked ~ .menuInner {
+        height:100px;
+        z-index: 10;
+    }
+
+    .menuInner{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin:auto;
+    }
+
+    .menuInner li{
+        margin: 5px auto;
+    }
+    
+    #footer{
+        margin:auto;
+        max-width: 700px;
+    }
+}
+
+@media (min-width:900px ){
+    input[type="checkbox"]:checked ~ .menuInner {
+        height:50px;
+        z-index: 10;
+    }
+    #footer{
+        margin-left: 0;
+    }
+ 
 }

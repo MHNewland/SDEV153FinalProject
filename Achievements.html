@@ -34,47 +34,71 @@
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Achievements</h1>
-                <img src="../images/sunshine background.jpg" alt="" />
-                <h2>Certification</h2>
-                <ul>
-                    <li>
-                        Certified Associate in Python Programming
-                        </br>
-                        <a href="https://www.credly.com/badges/34e52dc2-0f25-49a0-a8af-363b78024f8e/public_url">
-                            <img src="../images/pcap-31-03-pcap-certified-associate-in-python-programming.png" width="200" />
-                        </a>
-                    </li> 
-                </ul>
-                <h2>Code Louisville</h2>
-                <ul>                   
-                    <li>
-                        Code Louisville Data Analytics course, session 1 and 2.
-                        <br>
-                        <img src="../images/codelou-in-cert-dac1-jan2023-MATTHEW_NEWLAND.jpg" width="35%" />
-                        <img src="../images/codelou-cert-data-c2-may2023-MATTHEW_NEWLAND.jpg" width="35%"/>
-                    </li>
-                </ul>
-                <h2>Game Development</h2>
-                <ul>
-                    <li>
-                        <a href="../https://www.credly.com/badges/b2d34c9d-c60f-45b6-a011-396ca5e3831c/public_url">
-                            <img src="../images/Unity_Essentials-Pathway_Badge.png" width="30" />
-                            Unity Essentials Pathway badge
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.credly.com/badges/ae9d5bc9-7420-4b4f-8d4d-0f9bef1322b5/public_url">
-                            <img src="../images/Unity_Junior_Programmer_Pathway.png" width="30" />
-                            Unity Junior Programmer badge
-                        </a>
-                    </li>   
-                    <li>
-                        GameDev.TV 2D course completion
-                        <br>
-                        <img src="../images/GameDev-TV-2Dpng.png" width="35%" />
-                    </li>                                     
-                </ul>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modal-image-blank">
+                    <div id="caption"></div>
+                  </div>
+                <div class="achievements">
+                    <h1>Achievements</h1>
+                    <h2>Certification</h2>
+                    <ul>
+                        <li>
+                            <div class="achTitle">
+                                <a title="View Credly badge" href="https://www.credly.com/badges/34e52dc2-0f25-49a0-a8af-363b78024f8e/public_url">
+                                    Certified Associate in Python Programming
+                                </a>
+                            </div>
+                            <div class="achImg">
+                                <img class="thumb" id="PCAP" onclick="OpenModal('PCAP')" alt="Certified Associate in Python Programming Certification issued by Open EDG" src="/images/pcap-31-03-pcap-certified-associate-in-python-programming.png">
+                            </div>
+                        </li> 
+                    </ul>
+                    <a title="View Data Analysis examples" href="DataAnalysis"><h2>Data Analysis</h2></a>
+                    <ul>                   
+                        <li>
+                            <div class="achTitle">
+                                <p>Code Louisville Data Analytics course, session 1 and 2.</p>
+                            </div>
+                            <div class="achImg">
+                                <img class="thumb"  id="CL1" onclick="OpenModal('CL1')" alt="Code Louisville Data Analysis Course 1 Certificate" src="/images/codelou-in-cert-dac1-jan2023-MATTHEW_NEWLAND.jpg" >
+
+                                <img class="thumb" id="CL2" onclick="OpenModal('CL2')" alt="Code Louisville Data Analysis Course 2 Certificate" src="/images/codelou-cert-data-c2-may2023-MATTHEW_NEWLAND.jpg" >
+                            </div>
+                        </li>
+                    </ul>
+                    <a title="View Game Development examples" href="GameDevelopment/GameDevelopment.html"><h2>Game Development</h2></a>
+                    <ul>
+                        <li> 
+                            <div class="achTitle">
+                                <a title="View Credly badge" href="https://www.credly.com/badges/b2d34c9d-c60f-45b6-a011-396ca5e3831c/public_url">    
+                                    Unity Essentials Pathway badge
+                                </a>
+                            </div>
+                            <div class="achImg">
+                                <img class="thumb" id="UEP" onclick="OpenModal('UEP')" alt="https://learn.unity.com Unity Essentials Pathway badge" src="/images/Unity_Essentials-Pathway_Badge.png" height="180px">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="achTitle">
+                                <a title="View Credly badge" href="https://www.credly.com/badges/ae9d5bc9-7420-4b4f-8d4d-0f9bef1322b5/public_url">
+                                    Unity Junior Programmer badge
+                                </a>
+                            </div>
+                            <div class="achImg">
+                                <img class="thumb" id="UJP" onclick="OpenModal('UJP')" alt="https://learn.unity.com Unity Junior Programmer badge" src="/images/Unity_Junior_Programmer_Pathway.png" height="180px">
+                            </div>
+                        </li>   
+                        <li>
+                            <div class="achTitle">
+                                <p>GameDev.TV 2D course completion</p>
+                            </div>
+                            <div class="achImg">
+                                <img class="thumb" id="GDTV2D" style="width:230px" onclick="OpenModal('GDTV2D')" alt="GameDev.tv Unity 2D Game Development certificate" src="/images/GameDev-TV-2Dpng.png">
+                            </div>
+                        </li>                                     
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -122,5 +146,29 @@
             </footer>
     </div>
 </div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modal-image-blank");
+    var captionText = document.getElementById("caption");
+    var imgRatio;
+
+    function OpenModal(srcImg){
+      img = document.getElementById(srcImg);
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.style.width="35vw";
+      captionText.innerHTML = img.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    </script>
 </body>
 </html>

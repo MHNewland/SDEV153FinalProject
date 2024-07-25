@@ -1,8 +1,8 @@
-- Change menu based on screen size
-- change "view my resume" button
-- Confirm "AboutMe" is finished"
-- Create "Achievements" page
-    - headers for each type of achievement with link
+x Change menu based on screen size
+x change "view my resume" button
+x Confirm "AboutMe" is finished"
+x Create "Achievements" page
+    x headers for each type of achievement with link
 - Create "DataAnalysis" page
     - show data analysis related achievements with link to view others
 - Create "GameDevelopment" page
