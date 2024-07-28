@@ -1,9 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Python projects - Matthew Newland's Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Odibee+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/73e475da2b.js" crossorigin="anonymous"></script>
+    <title>Matthew Newland - Data Analysis</title>
 </head>
 <body>
 
@@ -16,7 +21,7 @@
             <li><a href="Achievements.html">Achievements</a></li>
             <li><a href="GameDevelopment/GameDevelopment.html">Game Development</a></li>
             <li><a href="DataAnalysis.html">Data Analysis</a></li>
-            <li><a href="CollegeProjects/CollegeProjects.html">College Projects</a></li>
+            <li><a href="CollegeProjects.html">College Projects</a></li>
         </ul>
         <label for="openMenu" class="menuIconToggle">
             <i class="arrow-background">
@@ -25,24 +30,50 @@
         </label>
     </div>    
     <div id="wrapper">
-
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <h1>Python Projects</h1>
-                <h2><a href="https://github.com/MHNewland/TicketGraph">TicketGraph</a></h2>
-                <p>This app was built as the final project of Code Louisville's Data Analytics course, session 1. I created it to be able to view trend data at my workplace for each team. I was put in charge of building a report to show the number of tickets each team has and information about those tickets. The original reports were created using Excel.</p>
-                <img src="/images/Ticket data blank.png" />
-                <img src="/images/ticket data rank and graph.png" />
-                </br>
-                </br>
-                <h2><a href="https://github.com/MHNewland/AnimeList">AnimeList</a></h2>
-                <p>This was the final project of Code Louisville's Data Analytics course, session 2. I set it up to be able to display a table about Anime scraped from AniChart and MyAnimeList, as well as chart a graph to show how many titles were released by year and season.</p>
-                <p>To view the app, you can visit <a href="https://clda2-animelist.streamlit.app/">https://clda2-animelist.streamlit.app/</a>.</p>
-                <img src="images/AnimeList-blank.png" width="600"/>
-                </br>
-                <img src="images/AnimeList-Filters.png" width="35%" />
-                <img src="images/AnimeList-Graph.png" width="35%" />
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modal-image-blank">
+                    <div id="caption"></div>    
+                </div>
+                <div class="content">
+                    <a title="View Data Analysis achievements" href="Achievements.html#DataAnalysis"><h1>Data Analysis</h1></a>
+                    <h2><a title="View github repository" href="https://github.com/MHNewland/TicketGraph">TicketGraph</a></h2>
+                    <div class="contentDesc">
+                        <p>This app was built as the final project of Code Louisville's Data Analytics course, session 1. I created it to be able to view trend data at my workplace for each team. I was put in charge of building a report to show the number of tickets each team has and information about those tickets. The original reports were created using Excel.</p>
+                    </div>
+                    <div class="contentImg">
+                        <img class="thumb" id="TGblank" onclick="OpenModal('TGblank')" 
+                            alt="Main screen of TicketGraph app with no options selected."
+                            title="TicketGraph main screen."
+                            src="images/Ticket-data-blank.png" >
+                        <img class="thumb" id="TG3" onclick="OpenModal('TG3')" 
+                            alt="TicketGraph app with 3 teams selected." 
+                            title="TicketGraph app with 3 teams selected."
+                            src="images/ticket-data-rank-and-graph.png" >
+                    </div>
+                    <h2><a title="View github repository" href="https://github.com/MHNewland/AnimeList">AnimeList</a></h2>
+                    <div class="contentDesc">
+                        <p>This was the final project of Code Louisville's Data Analytics course, session 2. I set it up to be able to display a table about Anime scraped from <a title="Anichart.net" href="https://anichart.net/"><i>AniChart</i></a> and <a title="MyAnimeList.net" href="https://myanimelist.net/"><i>MyAnimeList</i></a>, as well as chart a graph to show how many titles were released by year and season.</p>
+                        <p>To view the app, you can visit <a title="View AnimeList app."  href="https://clda2-animelist.streamlit.app/">https://clda2-animelist.streamlit.app/</a>.</p>
+                    </div>
+                    <div class="contentImg">
+                        <img class="thumb" id="ALblank" onclick="OpenModal('ALblank')"
+                            alt="AnimeList filters with default selection." 
+                            title="AnimeList filters with default selection."
+                            src="images/AnimeList-blank.png">
+                        <img class="thumb" id="ALfilters" onclick="OpenModal('ALfilters')" 
+                            alt="AnimeList filters with example data selected." 
+                            title="AnimeList filters with example data selected."
+                            src="images/AnimeList-Filters.png" >
+                        <img class="thumb" id="ALgraph" onclick="OpenModal('ALgraph')"
+                            alt="AnimeList graph of selected data." 
+                            title="AnimeList graph of selected data."
+                            src="images/AnimeList-Graph.png">
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -89,5 +120,23 @@
             </div>
         </footer>
     </div>
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modal-image-blank");
+        var captionText = document.getElementById("caption");
+
+        function OpenModal(srcImg){
+        img = document.getElementById(srcImg);
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+        modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>

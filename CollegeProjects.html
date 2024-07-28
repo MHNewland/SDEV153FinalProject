@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; URL=../WIP.html" />
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
@@ -23,7 +21,7 @@
             <li><a href="Achievements.html">Achievements</a></li>
             <li><a href="GameDevelopment/GameDevelopment.html">Game Development</a></li>
             <li><a href="DataAnalysis.html">Data Analysis</a></li>
-            <li><a href="CollegeProjects/CollegeProjects.html">College Projects</a></li>
+            <li><a href="CollegeProjects.html">College Projects</a></li>
         </ul>
         <label for="openMenu" class="menuIconToggle">
             <i class="arrow-background">
@@ -32,49 +30,271 @@
         </label>
     </div>    
     <div id="wrapper">
-
-</body>
-
-<!-- Footer -->
-<footer id="footer">
-    <div class="inner">
-        <div class="section">
-            <form method="post" action="https://formspree.io/f/xrgjakvb">
-                <h2>Let's get in touch</h2>
-                <div class="fields">
-                    <div class="field">
-                        <input type="text" name="name" id="name" placeholder="Name" >
-                    </div>
-                    <div class="field">
-                        <input type="email" name="email" id="email" placeholder="Email" >
-                    </div>
-                    <div class="field">
-                        <textarea name="message" id="message" placeholder="Message"></textarea>
-                    </div>
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img src="data:," class="modal-content" id="modal-image-blank" alt="Container for modal image.">
+                    <iframe class="modal-content" id="modal-video-blank" allowfullscreen></iframe>
+                    <div id="caption"></div>    
                 </div>
-                <input type="submit" value="Send" class="form-button" >
-            </form>
-        </div>
-        <div class="section">
-            <table id="contact-icons">
-                <tr>
-                    <th>Social Media:</th>
-                    <td><a target="_blank" href="https://www.facebook.com/matthew.h.newland" class="fa-brands fa-facebook-square fa-2x"><span class="label">Facebook</span></a></td>
-                    <td><a target="_blank" href="https://www.linkedin.com/in/matthew-h-newland/" class="fa-brands fa-linkedin fa-2x"><span class="label">LinkedIn</span></a></td>
-                </tr>
-                <tr>
-                    <th>Code examples:</th>
-                    <td><a target="_blank" href="https://github.com/MHNewland" class="fa-brands fa-github fa-2x"><span class="label">GitHub</span></a></td>
-                    <td><a target="_blank" href="https://play.unity.com/u/Amorindis" class="fa-brands fa-unity fa-2x"><span class="label">Unity</span></a></td>
-
-                </tr>
-                <tr>
-                    <th>Contact me:</th>
-                    <td><a target="_blank" href="tel:502-689-4396" class="fa-solid fa-phone fa-2x"><span class="label">Phone</span></a></td>
-                    <td><a target="_blank" href="mailto:matt.nwl@hotmail.com" class="fa-solid fa-envelope fa-2x"><span class="label">Email</span></a></td>
-                </tr>
-            </table>
+                <div class="content">
+                    <h1>College Projects</h1>
+                    <h2>Game Development</h2>
+                    <ul class="ul-nowrap">
+                        <li>
+                            <p>I've taken two game development classes at Ivy Tech: SDEV148-Introduction to Game Development, and SDEV248-Advanced Simulation and Game Design.</p>
+                            <div class="contentTitle">
+                                <h3>SDEV148</h3>
+                            </div>
+                            <ul>
+                                <h4>Hyper-Ball</h4>
+                                <ul>
+                                    <div class="contentDesc">
+                                        <details>
+                                            <summary>Final Project</summary>
+                                            <details>
+                                                <summary>Requirements</summary>
+                                                <ul>
+                                                    <li>A working main menu that allows for a new game to be started or to quit the game.</li>
+                                                    <li>Implementing a physics system that allows for player moments.</li>
+                                                    <li>Core gameplay loop needs to be implemented using visual scripts.</li>
+                                                    <li>Include at least two outside creative commons art assets. You do not need to create any custom assets instead you need to add 2 assets like character sprites or animations.</li>
+                                                    <li>Include at least two outside creative commons audio assets. You do not need to create any custom assets instead you need to add 2 assets like background music or sound effects.</li>
+                                                    <li>Include ex least one UI element that is displayed during gameplay.</li>
+                                                    <li>Fully update your design doc to reflect your final project status.</li>
+                                                    <li>Gameplay must be able to last for a 30-sec minimum. Only one level is required.</li>
+                                                </ul>
+                                            </details>
+                                            <div class="contentImg">
+                                                <img class="thumb" id="HBMenu" onclick="OpenModal('HBMenu')" 
+                                                    alt="Hyper-Ball Menu" title="Hyper-Ball Main Menu"
+                                                    src="images/Hyper-Ball-Menu.png">
+                                                <img class="thumb" id="HBGP" onclick="OpenModal('HBGP')" 
+                                                    alt="Hyper-Ball Gameplay" title="Hyper-Ball Gameplay"
+                                                    src="images/Hyper-Ball-Gameplay.png">
+                                            </div>
+                                        </details>
+                                    </div>
+                                </ul>
+                            </ul>
+                            <div class="contentTitle">
+                                <h3>SDEV248</h3>
+                            </div>
+                            <ul>
+                                <h4>Knight's Quest: The Princess Rescue</h4>
+                                <ul>
+                                    <div class="contentDesc">
+                                        <details>
+                                            <summary>Midterm Group Project</summary>
+                                            <details>
+                                                <summary>Requirements</summary>
+                                                <ul>
+                                                    <li>Functionality: Game adheres to the GDD and core features work.</li>
+                                                    <li>Code Quality: Well-structured, readable code with comments.</li>
+                                                    <li>Gameplay: Mechanics are engaging and balanced (as applicable to the genre).</li>
+                                                    <li>Design Choices: Justification for design decisions made during development.</li>
+                                                    <li>Presentation: Clear and concise demonstration.</li>
+                                                </ul>
+                                            </details>
+                                            <div class="contentImg">
+                                                <img class="thumb" id="KQH2P" onclick="OpenModal('KQH2P')" 
+                                                    alt="Knight's Quest How to play." 
+                                                    title="Knight's Quest How to play." 
+                                                    src="images/Knight's-Quest-H2P.png">
+                                                <img class="thumb" id="KQCS" onclick="OpenModal('KQIntro')" 
+                                                    alt="Knight's Quest Introduction." 
+                                                    title="Knight's Quest Introduction."
+                                                    src="images/Knight's-Quest-Beginning.png">
+                                            </div>
+                                            <div class="contentImg">
+                                                <img class="thumb" id="KQCombat" onclick="OpenModal('KQCombat')" 
+                                                    alt="Knight's Quest Combat." 
+                                                    title="Knight's Quest combat example."
+                                                    src="images/Knight's-Quest-Combat.png">
+                                                <img class="thumb" id="KQRoom" onclick="OpenModal('KQRoom')" 
+                                                    alt="Knight's Quest Room description example." 
+                                                    title="Knight's Quest Room description example."
+                                                    src="images/Knight's-Quest-Room.png">
+                                            </div>                                    
+                                        </details>
+                                    </div>
+                                </ul>
+                                <h4>ChromaQuest: The Kingdom of Color</h4>
+                                <ul>
+                                    <div class="contentDesc">
+                                        <details>
+                                            <summary>Final Project</summary>
+                                            <details>
+                                                <summary>Requirements</summary>
+                                                <ul>
+                                                    <li>Game must be made with an approved game engine, let me know in the proposal what game engine you intend to use -Preferably Unity. </li>
+                                                    <li>The game must be used to tell a story. </li>
+                                                    <li>The game must contain a minimum of three distinct levels and two cut-scenes.</li>
+                                                    <li>The game must be made with your own original graphics work, no outside assets allowed.</li>
+                                                    <li>The game must contain a UI panel in some fashion with both text and images.</li>
+                                                    <li>The game must include at least two types of opposition characters with selection structures dictating their actions (they cannot move randomly).</li>
+                                                    <li>The game must include at least one non-playable character which is relevant to the story being told with the game.</li>
+                                                </ul>
+                                            </details>
+                                            <div class="contentImg">
+                                                <img class="thumb" id="CQB" onclick="OpenModal('CQB')" 
+                                                    alt="ChromaQuest Introduction scene." 
+                                                    title="ChromaQuest Introduction scene." 
+                                                    src="images/ChromaQuest-Beginning.png">
+                                            </div>
+                                            <div class="contentImg">
+                                                <img class="thumb" id="CQL2B" onclick="OpenModal('CQL2B')" 
+                                                    alt="ChromaQuest level 2 - Blue" 
+                                                    title="ChromaQuest level 2 - Blue"
+                                                    src="images/ChromaQuest-Lvl2B.png">
+                                                <img class="thumb" id="CQL2R" onclick="OpenModal('CQL2R')" 
+                                                    alt="ChromaQuest level 2 - Red" 
+                                                    title="ChromaQuest level 2 - Red"
+                                                    src="images/ChromaQuest-Lvl2R.png">
+                                                <img class="thumb" id="CQL2Y" onclick="OpenModal('CQL2Y')" 
+                                                    alt="ChromaQuest level 2 - Yellow" 
+                                                    title="ChromaQuest level 2 - Yellow"
+                                                    src="images/ChromaQuest-Lvl2Y.png">
+                                            </div> 
+                                            <div class="contentImg">
+                                                <img class="thumb" id="CQS" onclick="OpenModal('CQS')" 
+                                                    alt="ChromaQuest Sniper enemy" 
+                                                    title="ChromaQuest Sniper enemy"
+                                                    src="images/ChromaQuest-Sniper.gif">
+                                                <img class="thumb" id="CQP" onclick="OpenModal('CQP')" 
+                                                    alt="ChromaQuest Prowler enemy" 
+                                                    title="ChromaQuest Prowler enemy"
+                                                    src="images/ChromaQuest-Prowler.gif">
+                                            </div>
+                                        </details>
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <h2>Cloud management</h2>
+                    <ul>
+                        <p>During my SVAD150:Cloud Fundamentals class, I primarily worked with AWS. </p>
+                        <div class="contentTitle">
+                            <h3>SVAD150</h3>
+                        </div>
+                        <ul>
+                            <h4>AWS Cloud Deployment</h4>
+                            <details>
+                                <summary>Final Project</summary>
+                                <details>
+                                    <summary>Requirements</summary>
+                                    <ul>
+                                        <li>Have MFA on the root account.</li>
+                                        <li>Have a publicly-accessible site link.</li>
+                                        <li>Draw a diagram of your full cloud deployment</li>
+                                        <li>Prove the network connection from the public VM can reach both the private VM and the internet. Prove the private VM cannot connect to the internet.</li>
+                                        <li>Create an alarm for your private VM</li>
+                                        <li>Estimate the annual cost of your deployment</li>
+                                        <li>Describe your cloud configuration</li>
+                                    </ul>
+                                </details>
+                                <div class="contentImg">
+                                    <img class="thumb" id="AWSDeploy" onclick="OpenModal('AWSDeploy')" 
+                                        alt="AWS Deployment diagram" 
+                                        title="AWS Deployment diagram"
+                                        src="images/Cloud-Deployment.png">
+                                    <img class="thumb" id="CloudFeedback" onclick="OpenModal('CloudFeedback')" 
+                                        alt="Feedback on project Presentation" 
+                                        title="Feedback on project Presentation"
+                                        src="images/Cloud-Feedback.png">
+                                    <img class="thumb" onclick="OpenModalVideo('CloudPresentation')" 
+                                        alt="Cloud deployment presentation."
+                                        title="Cloud deployment presentation."
+                                        src="images/Cloud-Presentation-Thumbnail.png">
+                                    <embed height="0" width="0" src="https://www.youtube.com/embed/8bE-F9wibyw" id="CloudPresentation">                               
+                                        
+                                </div>
+                            </details>
+                        </ul>
+                    </ul>
+                    <h2>Data Analysis / Database Management</h2>
+                    <ul>
+                        <p>The final</p>
+                    </ul>
+                </div>                            
+            </div>
         </div>
     </div>
-</footer>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="section">
+                <form method="post" action="https://formspree.io/f/xrgjakvb">
+                    <h2>Let's get in touch</h2>
+                    <div class="fields">
+                        <div class="field">
+                            <input type="text" name="name" id="name" placeholder="Name" >
+                        </div>
+                        <div class="field">
+                            <input type="email" name="email" id="email" placeholder="Email" >
+                        </div>
+                        <div class="field">
+                            <textarea name="message" id="message" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" value="Send" class="form-button" >
+                </form>
+            </div>
+            <div class="section">
+                <table id="contact-icons">
+                    <tr>
+                        <th>Social Media:</th>
+                        <td><a target="_blank" href="https://www.facebook.com/matthew.h.newland" class="fa-brands fa-facebook-square fa-2x"><span class="label">Facebook</span></a></td>
+                        <td><a target="_blank" href="https://www.linkedin.com/in/matthew-h-newland/" class="fa-brands fa-linkedin fa-2x"><span class="label">LinkedIn</span></a></td>
+                    </tr>
+                    <tr>
+                        <th>Code examples:</th>
+                        <td><a target="_blank" href="https://github.com/MHNewland" class="fa-brands fa-github fa-2x"><span class="label">GitHub</span></a></td>
+                        <td><a target="_blank" href="https://play.unity.com/u/Amorindis" class="fa-brands fa-unity fa-2x"><span class="label">Unity</span></a></td>
+
+                    </tr>
+                    <tr>
+                        <th>Contact me:</th>
+                        <td><a target="_blank" href="tel:502-689-4396" class="fa-solid fa-phone fa-2x"><span class="label">Phone</span></a></td>
+                        <td><a target="_blank" href="mailto:matt.nwl@hotmail.com" class="fa-solid fa-envelope fa-2x"><span class="label">Email</span></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modal-image-blank");
+        var modalVid = document.getElementById("modal-video-blank");
+        var captionText = document.getElementById("caption");
+
+        function OpenModal(srcImg){
+            img = document.getElementById(srcImg);
+            modalVid.style.display="none";
+            modalImg.style.display="block";
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        function OpenModalVideo(srcVid){
+            vid = document.getElementById(srcVid);
+            modalImg.style.display="none";
+            modalVid.style.display="block";
+            modal.style.display = "block";
+            modalVid.src = vid.src;
+            modalVid.style.width="90%";
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+            modalVid.src="data:,";
+        }
+    </script>
+</body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
             <li><a href="Achievements.html">Achievements</a></li>
             <li><a href="GameDevelopment/GameDevelopment.html">Game Development</a></li>
             <li><a href="DataAnalysis.html">Data Analysis</a></li>
-            <li><a href="CollegeProjects/CollegeProjects.html">College Projects</a></li>
+            <li><a href="CollegeProjects.html">College Projects</a></li>
         </ul>
         <label for="openMenu" class="menuIconToggle">
             <i class="arrow-background">
@@ -30,145 +30,154 @@
         </label>
     </div>    
     <div id="wrapper">
-
         <!-- Main -->
         <div id="main">
             <div class="inner">
                 <div id="myModal" class="modal">
                     <span class="close">&times;</span>
-                    <img class="modal-content" id="modal-image-blank">
+                    <img src="data:," class="modal-content" id="modal-image-blank" alt="Container for modal image.">
                     <div id="caption"></div>
-                  </div>
-                <div class="achievements">
+                </div>
+                <div class="content">
                     <h1>Achievements</h1>
-                    <h2>Certification</h2>
-                    <ul>
+                    <h2 id="Certifications">Certifications</h2>
+                    <ul class="ul-wrap">
                         <li>
-                            <div class="achTitle">
+                            <div class="contentTitle">
                                 <a title="View Credly badge" href="https://www.credly.com/badges/34e52dc2-0f25-49a0-a8af-363b78024f8e/public_url">
                                     Certified Associate in Python Programming
                                 </a>
                             </div>
-                            <div class="achImg">
-                                <img class="thumb" id="PCAP" onclick="OpenModal('PCAP')" alt="Certified Associate in Python Programming Certification issued by Open EDG" src="/images/pcap-31-03-pcap-certified-associate-in-python-programming.png">
+                            <div class="contentImg">
+                                <img class="thumb" id="PCAP" onclick="OpenModal('PCAP')" 
+                                alt="Certified Associate in Python Programming Certification issued by Open EDG" 
+                                title="PCAP Certification badge"
+                                src="images/pcap-31-03-pcap-certified-associate-in-python-programming.png">
                             </div>
                         </li> 
                     </ul>
-                    <a title="View Data Analysis examples" href="DataAnalysis"><h2>Data Analysis</h2></a>
-                    <ul>                   
+                    <a title="View Data Analysis examples" href="DataAnalysis.html"><h2 id="DataAnalysis">Data Analysis</h2></a>
+                    <ul class="ul-wrap">                   
                         <li>
-                            <div class="achTitle">
+                            <div class="contentTitle">
                                 <p>Code Louisville Data Analytics course, session 1 and 2.</p>
                             </div>
-                            <div class="achImg">
-                                <img class="thumb"  id="CL1" onclick="OpenModal('CL1')" alt="Code Louisville Data Analysis Course 1 Certificate" src="/images/codelou-in-cert-dac1-jan2023-MATTHEW_NEWLAND.jpg" >
+                            <div class="contentImg">
+                                <img class="thumb"  id="CL1" onclick="OpenModal('CL1')" 
+                                    alt="Code Louisville Data Analysis Course 1 Certificate" 
+                                    title="C.L. Data Analysis Course 1"
+                                    src="images/codelou-in-cert-dac1-jan2023-MATTHEW_NEWLAND.jpg" >
 
-                                <img class="thumb" id="CL2" onclick="OpenModal('CL2')" alt="Code Louisville Data Analysis Course 2 Certificate" src="/images/codelou-cert-data-c2-may2023-MATTHEW_NEWLAND.jpg" >
+                                <img class="thumb" id="CL2" onclick="OpenModal('CL2')" 
+                                    alt="Code Louisville Data Analysis Course 2 Certificate" 
+                                    title="C.L. Data Analysis Course 2"
+                                    src="images/codelou-cert-data-c2-may2023-MATTHEW_NEWLAND.jpg" >
                             </div>
                         </li>
                     </ul>
-                    <a title="View Game Development examples" href="GameDevelopment/GameDevelopment.html"><h2>Game Development</h2></a>
-                    <ul>
+                    <a title="View Game Development examples" href="GameDevelopment/GameDevelopment.html"><h2 id="GameDev">Game Development</h2></a>
+                    <ul class="ul-wrap">
                         <li> 
-                            <div class="achTitle">
+                            <div class="contentTitle">
                                 <a title="View Credly badge" href="https://www.credly.com/badges/b2d34c9d-c60f-45b6-a011-396ca5e3831c/public_url">    
                                     Unity Essentials Pathway badge
                                 </a>
                             </div>
-                            <div class="achImg">
-                                <img class="thumb" id="UEP" onclick="OpenModal('UEP')" alt="https://learn.unity.com Unity Essentials Pathway badge" src="/images/Unity_Essentials-Pathway_Badge.png" height="180px">
+                            <div class="contentImg">
+                                <img class="thumb" id="UEP" onclick="OpenModal('UEP')" 
+                                    alt="https://learn.unity.com Unity Essentials Pathway badge"
+                                    title="Unity Essentials Pathway badge"
+                                    src="images/Unity_Essentials-Pathway_Badge.png" height="180">
                             </div>
                         </li>
                         <li>
-                            <div class="achTitle">
+                            <div class="contentTitle">
                                 <a title="View Credly badge" href="https://www.credly.com/badges/ae9d5bc9-7420-4b4f-8d4d-0f9bef1322b5/public_url">
                                     Unity Junior Programmer badge
                                 </a>
                             </div>
-                            <div class="achImg">
-                                <img class="thumb" id="UJP" onclick="OpenModal('UJP')" alt="https://learn.unity.com Unity Junior Programmer badge" src="/images/Unity_Junior_Programmer_Pathway.png" height="180px">
+                            <div class="contentImg">
+                                <img class="thumb" id="UJP" onclick="OpenModal('UJP')" 
+                                    alt="https://learn.unity.com Unity Junior Programmer badge" 
+                                    title="Unity Junior Programmer badge"
+                                    src="images/Unity_Junior_Programmer_Pathway.png" height="180">
                             </div>
                         </li>   
                         <li>
-                            <div class="achTitle">
+                            <div class="contentTitle">
                                 <p>GameDev.TV 2D course completion</p>
                             </div>
-                            <div class="achImg">
-                                <img class="thumb" id="GDTV2D" style="width:230px" onclick="OpenModal('GDTV2D')" alt="GameDev.tv Unity 2D Game Development certificate" src="/images/GameDev-TV-2Dpng.png">
+                            <div class="contentImg">
+                                <img class="thumb" id="GDTV2D" style="width:230px" onclick="OpenModal('GDTV2D')" 
+                                    alt="GameDev.tv Unity 2D Game Development certificate" 
+                                    title="Unity 2D Game Development certificate"
+                                    src="images/GameDev-TV-2Dpng.png">
                             </div>
                         </li>                                     
                     </ul>
                 </div>
             </div>
         </div>
-
-             <!-- Footer -->
-             <footer id="footer">
-                <div class="inner">
-                    <div class="section">
-                        <form method="post" action="https://formspree.io/f/xrgjakvb">
-                            <h2>Let's get in touch</h2>
-                            <div class="fields">
-                                <div class="field">
-                                    <input type="text" name="name" id="name" placeholder="Name" >
-                                </div>
-                                <div class="field">
-                                    <input type="email" name="email" id="email" placeholder="Email" >
-                                </div>
-                                <div class="field">
-                                    <textarea name="message" id="message" placeholder="Message"></textarea>
-                                </div>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <div class="section">
+                    <form method="post" action="https://formspree.io/f/xrgjakvb">
+                        <h2>Let's get in touch</h2>
+                        <div class="fields">
+                            <div class="field">
+                                <input type="text" name="name" id="name" placeholder="Name" >
                             </div>
-                            <input type="submit" value="Send" class="form-button" >
-                        </form>
-                    </div>
-                    <div class="section">
-                        <table id="contact-icons">
-                            <tr>
-                                <th>Social Media:</th>
-                                <td><a target="_blank" href="https://www.facebook.com/matthew.h.newland" class="fa-brands fa-facebook-square fa-2x"><span class="label">Facebook</span></a></td>
-                                <td><a target="_blank" href="https://www.linkedin.com/in/matthew-h-newland/" class="fa-brands fa-linkedin fa-2x"><span class="label">LinkedIn</span></a></td>
-                            </tr>
-                            <tr>
-                                <th>Code examples:</th>
-                                <td><a target="_blank" href="https://github.com/MHNewland" class="fa-brands fa-github fa-2x"><span class="label">GitHub</span></a></td>
-                                <td><a target="_blank" href="https://play.unity.com/u/Amorindis" class="fa-brands fa-unity fa-2x"><span class="label">Unity</span></a></td>
-
-                            </tr>
-                            <tr>
-                                <th>Contact me:</th>
-                                <td><a target="_blank" href="tel:502-689-4396" class="fa-solid fa-phone fa-2x"><span class="label">Phone</span></a></td>
-                                <td><a target="_blank" href="mailto:matt.nwl@hotmail.com" class="fa-solid fa-envelope fa-2x"><span class="label">Email</span></a></td>
-                            </tr>
-                        </table>
-                    </div>
+                            <div class="field">
+                                <input type="email" name="email" id="email" placeholder="Email" >
+                            </div>
+                            <div class="field">
+                                <textarea name="message" id="message" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <input type="submit" value="Send" class="form-button" >
+                    </form>
                 </div>
-            </footer>
+                <div class="section">
+                    <table id="contact-icons">
+                        <tr>
+                            <th>Social Media:</th>
+                            <td><a target="_blank" href="https://www.facebook.com/matthew.h.newland" class="fa-brands fa-facebook-square fa-2x"><span class="label">Facebook</span></a></td>
+                            <td><a target="_blank" href="https://www.linkedin.com/in/matthew-h-newland/" class="fa-brands fa-linkedin fa-2x"><span class="label">LinkedIn</span></a></td>
+                        </tr>
+                        <tr>
+                            <th>Code examples:</th>
+                            <td><a target="_blank" href="https://github.com/MHNewland" class="fa-brands fa-github fa-2x"><span class="label">GitHub</span></a></td>
+                            <td><a target="_blank" href="https://play.unity.com/u/Amorindis" class="fa-brands fa-unity fa-2x"><span class="label">Unity</span></a></td>
+
+                        </tr>
+                        <tr>
+                            <th>Contact me:</th>
+                            <td><a target="_blank" href="tel:502-689-4396" class="fa-solid fa-phone fa-2x"><span class="label">Phone</span></a></td>
+                            <td><a target="_blank" href="mailto:matt.nwl@hotmail.com" class="fa-solid fa-envelope fa-2x"><span class="label">Email</span></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </footer>
     </div>
-</div>
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modal-image-blank");
+        var captionText = document.getElementById("caption");
 
-<script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("modal-image-blank");
-    var captionText = document.getElementById("caption");
-    var imgRatio;
+        function OpenModal(srcImg){
+        img = document.getElementById(srcImg);
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+        }
 
-    function OpenModal(srcImg){
-      img = document.getElementById(srcImg);
-      modal.style.display = "block";
-      modalImg.src = img.src;
-      modalImg.style.width="35vw";
-      captionText.innerHTML = img.alt;
-    }
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() { 
-      modal.style.display = "none";
-    }
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+        modal.style.display = "none";
+        }
     </script>
 </body>
 </html>
